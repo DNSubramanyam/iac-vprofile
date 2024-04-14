@@ -45,7 +45,7 @@ jobs:
         run: terraform validate
       - name: terraform plan
         id: plan
-        run: terraform plan -no-colour -input=false -out planfile
+        run: terraform plan -no-color -input=false -out planfile
         continue-on-error: true
       - name: terraform plan status
         if: steps.plan.outcome == 'failure'
